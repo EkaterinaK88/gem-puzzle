@@ -2,7 +2,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const body = document.body;
 
-let savedNumbers = localStorage.getItem('savedGame').split(',');
+let storage = localStorage.getItem('savedGame');
+let savedNumbers;
+if (storage) {
+  savedNumbers = storage.split(',');
+}
 
 //название игры
 const gameName = document.createElement('p');
