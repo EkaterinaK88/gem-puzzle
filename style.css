@@ -1,0 +1,150 @@
+.game-name {
+  margin: 20px auto;
+  width: 150px;
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.8px;
+  margin-bottom: 30px;
+}
+
+.game-board {
+  width: 400px;
+  height: 400px;
+  border: 3px solid rgb(50, 129, 83);
+  background-color: rgb(199, 223, 209);
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.game-board__chip {
+  width: 94px;
+  height: 94px;
+  border: 2px solid rgb(50, 129, 83);
+  background-color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 30px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+
+.game-board__empty-space {
+  border: none;
+  background-color: rgb(199, 223, 209);
+  cursor: default;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin: 20px auto;
+  margin-bottom: 15px;
+}
+
+.button {
+  display: block;
+  background-color: rgb(199, 223, 209);
+  padding: 6px 7px;
+  color: rgb(40, 73, 54);
+  border: none;
+  box-shadow: 0px 0px 2px 1px rgb(40, 73, 54);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 3px 2px rgb(40, 73, 54);
+  font-weight: 700;
+  padding: 2px 3px;
+}
+
+.button:active {
+  outline: none;
+  color: rgb(212, 226, 218);
+  background-color: rgb(79, 116, 94);
+}
+
+.moves,
+.time {
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0px;
+}
+
+.moves {
+  margin-right: 12%;
+}
+
+.game-data {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+@media (max-width: 440px) {
+  .game-name {
+    width: 36%;
+    font-size: 6vw;
+  }
+
+  .game-board {
+    width: 95%;
+    height: 95%;
+    padding: 0.7%;
+    padding-bottom: 0;
+  }
+
+  .game-board__chip {
+    width: 24.5%;
+    height: 21.7vw;
+    padding-top: 8%;
+    font-size: 6vw;
+    margin-bottom: 0.6%;
+  }
+
+  .buttons {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 94%;
+  }
+
+  .button {
+    padding: 6px 3px;
+  }
+
+  .game-data {
+    width: 60%;
+  }
+
+  .moves,
+  .time {
+    font-size: 4.5vw;
+  }
+}
+
+@media (max-width: 397px) {
+  .buttons {
+    justify-content: start;
+    flex-direction: column;
+  }
+
+  .button {
+    padding: 6px 3px;
+    margin-bottom: 3%;
+  }
+
+  .moves,
+  .time {
+    font-size: 5vw;
+  }
+}
