@@ -74,13 +74,13 @@
 
 .moves,
 .time {
-  font-size: 19px;
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
   margin-bottom: 0px;
 }
 
 .moves {
-  margin-right: 12%;
+  margin-right: 7%;
 }
 
 .game-data {
@@ -93,7 +93,7 @@
 
 @media (max-width: 440px) {
   .game-name {
-    width: 36%;
+    width: 37%;
     font-size: 6vw;
   }
 
@@ -145,6 +145,6 @@
 
   .moves,
   .time {
-    font-size: 5vw;
+    font-size: 4.6vw;
   }
 }
