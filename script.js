@@ -124,6 +124,7 @@ buttonStart.addEventListener('click', (evt) => {
   generateChips();
   timeNode.textContent = '00:00';
   movesValue = 0;
+  moves.textContent = `Ходов: ${movesValue}`;
 
   chips = document.getElementsByClassName('game-board__chip'); 
   for (let i = 0; i < 16; i++) { 
