@@ -3,9 +3,12 @@ window.addEventListener('DOMContentLoaded', () => {
 const body = document.body;
 
 let storage = localStorage.getItem('savedGame');
+let storageTime = localStorage.getItem('savedTime');
+let storageMoves = localStorage.getItem('savedMoves');
 let savedNumbers;
 if (storage) {
   savedNumbers = storage.split(',');
+  storageMoves = Number(storageMoves);
 }
 
 //название игры
@@ -36,7 +39,7 @@ buttons.append(buttonResult);
 body.append(buttons);
 
 //время игры и количество ходов
-let movesValue = 0;
+let movesValue = storageMoves || 0;
 
 const gameData = document.createElement('div');
 gameData.classList.add('game-data');
@@ -50,7 +53,7 @@ time.textContent = 'Время: ';
 gameData.append(time);
 const timeNode = document.createElement('span');
 timeNode.classList.add('time', 'timeNode');
-timeNode.textContent = '00:00';
+timeNode.textContent = storageTime || '00:00';
 time.append(timeNode);
 body.append(gameData);
 
@@ -120,6 +123,7 @@ buttonStart.addEventListener('click', (evt) => {
   })
   generateChips();
   timeNode.textContent = '00:00';
+  movesValue = 0;
 
   chips = document.getElementsByClassName('game-board__chip'); 
   for (let i = 0; i < 16; i++) { 
@@ -149,6 +153,8 @@ buttonSave.addEventListener('click', (evt) => {
     savedGame.push(item.textContent);
   })
   localStorage.setItem('savedGame', savedGame);
+  localStorage.setItem('savedTime', timeNode.textContent);
+  localStorage.setItem('savedMoves', movesValue);
 });
 
 
